@@ -542,9 +542,13 @@ PERMANENT_FAILURES: set[str] = {
     "not_a_job_application", "unsafe_permissions",
     "unsafe_verification", "sso_required",
     "site_blocked", "cloudflare_blocked", "blocked_by_cloudflare",
+    "work_sponsorship_not_available", "requires_sponsorship_not_eligi",
+    "sponsorship_not_available", "no_sponsorship",
+    "contract_position", "contract_position_ineligible",
+    "not_full_time_salaried", "contractor_position_not_full_time",
 }
 
-PERMANENT_PREFIXES: tuple[str, ...] = ("site_blocked", "cloudflare", "blocked_by")
+PERMANENT_PREFIXES: tuple[str, ...] = ("site_blocked", "cloudflare", "blocked_by", "sponsorship", "requires_sponsorship", "contract_position", "not_full_time")
 
 
 def _is_permanent_failure(result: str) -> bool:

@@ -29,6 +29,19 @@ description_reject:
   - "mercor"
   - "turing.com"
   - "toptal"
+  - "weekly paypal"
+  - "airtm"
+  - "united kingdom (remote)"
+  - "australia (remote)"
+  - "canada (remote)"
+  - "location: united kingdom"
+  - "location: australia"
+  - "location: canada"
+  - "location: india"
+  - "location: philippines"
+  - "location: europe"
+  - "location: nigeria"
+  - "location: pakistan"
 
 # ── Blocked sites — too problematic for automation ───────────────────────
 blocked:
@@ -91,22 +104,16 @@ sites:
     url: "https://www.talent.com/jobs?k={query_encoded}&l={location_encoded}"
     type: search
 
-  - name: "Randstad Canada"
-    url: "https://www.randstad.ca/jobs/?keywords={query_encoded}&location={location_encoded}"
-    type: search
-
-  - name: "CareerJet Canada"
-    url: "https://www.careerjet.ca/search/jobs?s={query_encoded}&l={location_encoded}"
-    type: search
-
-  - name: "Job Bank Canada"
-    url: "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring={query_encoded}&locationstring={location_encoded}&fage=2&sort=D"
-    type: search
+  # Canada-specific sites removed -- US-only filter active
+  # - name: "Randstad Canada" ...
+  # - name: "CareerJet Canada" ...
+  # - name: "Job Bank Canada" ...
 
   # General tech (with search)
-  - name: "Dice"
-    url: "https://www.dice.com/jobs?q={query_encoded}&location=Remote&pageSize=100"
-    type: search
+  # Dice disabled -- CSS selectors match cards but extract 0 titles/URLs every time
+  # - name: "Dice"
+  #   url: "https://www.dice.com/jobs?q={query_encoded}&location=Remote&pageSize=100"
+  #   type: search
 
   - name: "SimplyHired"
     url: "https://www.simplyhired.com/search?q={query_encoded}&l={location_encoded}"
